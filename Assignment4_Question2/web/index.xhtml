@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
+    <h:head>
+        <title>Booking Page</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    </h:head>
+    <h:body>
+        <div class="container">
+            <h1 class="text-center">Enter Information of your Ticket</h1>
+            <h:form>
+                <div class="mb-3">
+                    <h:outputLabel for="journeyStart" class="form-label">Journey Starts From:</h:outputLabel>
+                    <h:inputText id="journeyStart" class="form-control" value="#{ticketContronllerManagedBean.ticket.journeyStart}" required="true" p:autofocus="true" requiredMessage="Enter Journey Starts From Please"/>
+                    <h:message for="journeyStart" class="text-danger"/>
+                </div>
+                <div class="mb-3">
+                    <h:outputLabel for="destination" class="form-label"> Destination Place:</h:outputLabel>
+                    <h:inputText id="destination" class="form-control" value="#{ticketContronllerManagedBean.ticket.destination}" required="true" requiredMessage="Enter Destination Place Please"/>
+                    <h:message for="destination" class="text-danger"/>
+                </div>
+                <div class="mb-3">
+                    <h:outputLabel for="journeyDate" class="form-label">Date of Journey:</h:outputLabel>
+                    <h:inputText id="journeyDate" class="form-control" p:type="date" value="#{ticketContronllerManagedBean.ticket.journeyDate}" required="true" requiredMessage="Enter Date of Journey Please">
+                        <f:convertDateTime pattern="yyyy-MM-dd" for="value" />
+                    </h:inputText>
+                    <h:message for="journeyDate" class="text-danger"/>
+                </div>
+                <div class="mb-3">
+                    <h:outputLabel for="numberOfSeats" class="form-label">Number of seat:</h:outputLabel>
+                    <h:inputText id="numberOfSeats" class="form-control" value="#{ticketContronllerManagedBean.ticket.numberOfSeat}" required="true" requiredMessage="Enter Number of Seat Please"/>
+                    <h:message for="numberOfSeat" class="text-danger"/>
+                </div>
+                <h:commandButton value="Book" class="btn btn-primary" action="#{ticketContronllerManagedBean.bookingTicket()}" />
+            </h:form>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    </h:body>
+</html>
