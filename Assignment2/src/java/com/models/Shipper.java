@@ -1,7 +1,10 @@
 package com.models;
 
+import javax.validation.constraints.NotNull;
+
 public class Shipper {
     private String shipperID;
+    @NotNull(message = "Company Name can't be empty!!!")
     private String companyName;
     private String phone;
 

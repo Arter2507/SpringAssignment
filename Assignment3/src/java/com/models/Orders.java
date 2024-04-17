@@ -2,7 +2,7 @@ package com.models;
 
 public class Orders {
 
-    private String giftOrderID;
+    private Long giftOrderID;
     private String giftOrderName;
     private int giftOrderQuantity;
     private double giftOrderDiscount;
@@ -15,7 +15,7 @@ public class Orders {
     public Orders() {
     }
 
-    public Orders(String giftOrderID, String giftOrderName, int giftOrderQuantity, double giftOrderDiscount, double giftOrderPrice, double discountedPrice, double totalPrice, String giftOrderColors, String giftOrderCategory) {
+    public Orders(Long giftOrderID, String giftOrderName, int giftOrderQuantity, double giftOrderDiscount, double giftOrderPrice, double discountedPrice, double totalPrice, String giftOrderColors, String giftOrderCategory) {
         this.giftOrderID = giftOrderID;
         this.giftOrderName = giftOrderName;
         this.giftOrderQuantity = giftOrderQuantity;
@@ -27,11 +27,11 @@ public class Orders {
         this.giftOrderCategory = giftOrderCategory;
     }
 
-    public String getGiftOrderID() {
+    public Long getGiftOrderID() {
         return giftOrderID;
     }
 
-    public void setGiftOrderID(String giftOrderID) {
+    public void setGiftOrderID(Long giftOrderID) {
         this.giftOrderID = giftOrderID;
     }
 

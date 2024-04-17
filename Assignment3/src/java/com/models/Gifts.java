@@ -1,13 +1,13 @@
 package com.models;
 
 public class Gifts {
-    private String giftID;
+    private long giftID;
     private String giftName;
     private double price;
     private String colors;
     private String category;
     
-    public Gifts(String giftID, String giftName, double price, String colors, String category) {
+    public Gifts(long giftID, String giftName, double price, String colors, String category) {
         this.giftID = giftID;
         this.giftName = giftName;
         this.price = price;
@@ -18,11 +18,11 @@ public class Gifts {
     public Gifts() {
     }
 
-    public String getGiftID() {
+    public long getGiftID() {
         return giftID;
     }
 
-    public void setGiftID(String giftID) {
+    public void setGiftID(long giftID) {
         this.giftID = giftID;
     }
 
