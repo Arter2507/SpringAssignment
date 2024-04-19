@@ -19,7 +19,20 @@
             </div>
             <div class="col-12 mt-4">
                 <button type="submit" class="btn btn-info">Greet Me</button>
-            </div>       
+            </div>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <form:input path="name" type="text" name="name" id="name" placeholder="Enter Your Name"/>
+                        </td>
+                        <td>
+                            <input type="submit" value="Submit"/>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
         </form:form>
 
         <h2>Available Gifts</h2>
